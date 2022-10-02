@@ -14,8 +14,9 @@ function App() {
       {path : 'home', element : <Home /> },
       {path : 'about', element : <About /> }
     ]},
-    {path : 'about', element : <About /> }
-
+    {path : 'about', element : <About /> },
+    {path : '*', element : '404 Na paile kiccho korar nai' },
+      // 4of4 sobar last a thakbe
   ])
   return (
     <div className="App">
