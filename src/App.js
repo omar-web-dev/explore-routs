@@ -12,7 +12,12 @@ function App() {
     children : [
       {path : '/', element : <Home /> },
       {path : 'home', element : <Home /> },
-      {path : 'about', element : <About /> }
+      {
+        path : 'about', 
+        loader : ()=>{
+          return fetch(`https://jsonplaceholder.typicode.com/users`)
+        },
+        element : <About /> }
     ]},
     {path : 'about', element : <About /> },
     {path : '*', element : '404 Na paile kiccho korar nai' },
